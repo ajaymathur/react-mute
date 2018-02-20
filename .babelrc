@@ -2,8 +2,21 @@
   "presets": [["env", { "modules": false }], "react", "flow"],
   "plugins": ["transform-class-properties"],
   "env": {
+    "production:cjs": {
+      "presets": ["env", "react", "flow"],
+      "plugins": [
+        "transform-class-properties"
+      ]
+    },
+    "production:esm": {
+      "presets": [["env", { "modules": false }], "react", "flow"],
+      "plugins": [
+        "transform-class-properties"
+      ]
+    },
     "test": {
-      "plugins": ["transform-es2015-modules-commonjs"]
+      "presets": ["env", "react", "flow"],
+      "plugins": ["transform-class-properties"]
     }
   }
 }

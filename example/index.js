@@ -1,23 +1,36 @@
 // @flow
 import React from "react";
 import ReactDOM from "react-dom";
-import Blur from "../src/blur";
+import Mute from "../src/mute";
 
-class App extends React.Component<{}, {}> {
+type State = {
+  value: string,
+}
+
+class App extends React.Component<{}, State> {
+
+  constructor() {
+    super();
+    this.state = { value: 'This is ahole sentence' };
+  }
+
+  handleChange = (event) => {
+    this.setState({ value: event.target.value });
+  }
+
   render() {
     return (
       <div>
-        <Blur
-          text="This is Ajay some fuck sentece"
-          dangerWords={["fuck"]}
-          safeText="❤️"
+        <input type="text" value={this.state.value} onChange={this.handleChange} />
+        <Mute
+          text={this.state.value}
         >
           {textWithBlur => (
             <div>
               <div>{textWithBlur}</div>
             </div>
           )}
-        </Blur>
+        </Mute>
       </div>
     );
   }
