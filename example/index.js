@@ -25,9 +25,9 @@ class App extends React.Component<{}, State> {
         <Mute
           text={this.state.value}
         >
-          {textWithBlur => (
+          {textWithMute => (
             <div>
-              <div>{textWithBlur}</div>
+              <div>{textWithMute}</div>
             </div>
           )}
         </Mute>
