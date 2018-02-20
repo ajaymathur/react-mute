@@ -6,6 +6,9 @@
   "license": "MIT",
   "main": "dist/cjs/mute.js",
   "module": "dist/esm/mute.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "parcel example/index.html --out-dir build/output",
     "build": "yarn build:esm && yarn build:cjs",
