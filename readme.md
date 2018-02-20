@@ -46,7 +46,9 @@ List of words &rarr; https://github.com/web-mech/badwords/blob/master/lib/lang.j
 
 Array of words to unmute. This will remove words from existing list of bad words.
 
-### **`safeText`** ***default: '*'***
+### **`safeText`** 
+
+**default: '*'**
 
 Replace these character in muted words.
 
