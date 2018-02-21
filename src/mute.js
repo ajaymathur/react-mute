@@ -4,10 +4,9 @@ import Filter from 'bad-words';
 
 type MuteProps = {
   addWords?: Array<string>,
-  children: Function,
+  children: string,
   removeWords?: Array<string>,
   safeText?: string,
-  text: string,
 };
 
 export default class Mute extends React.Component<MuteProps> {
@@ -31,13 +30,16 @@ export default class Mute extends React.Component<MuteProps> {
         this.filter.removeWords(removeWord);  
       });
     }
-    
-
   }
 
   render() {
-    const { text, children } = this.props;
+    const { children } = this.props;
     
-    return this.props.children(this.filter.clean(text));
+    return (
+      // $FlowFixMe
+      <React.Fragment>
+        {this.filter.clean(children)}
+      </React.Fragment>
+    );
   }
 }

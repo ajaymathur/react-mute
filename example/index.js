@@ -22,14 +22,8 @@ class App extends React.Component<{}, State> {
     return (
       <div>
         <input type="text" value={this.state.value} onChange={this.handleChange} />
-        <Mute
-          text={this.state.value}
-        >
-          {textWithMute => (
-            <div>
-              <div>{textWithMute}</div>
-            </div>
-          )}
+        <Mute>
+          {this.state.value}
         </Mute>
       </div>
     );
