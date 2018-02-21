@@ -1,4 +1,4 @@
-![Preview](.github/banner.png)
+![Preview](github/banner.png)
 
 > Mute the bad words in react component
 
@@ -19,22 +19,21 @@ Stop people from polluting your react application with bad words. Mute the bad w
 
   // in render
   <Mute
-    text="Actual text there bad words are to be muted"
     safeText="❤️"
     addWords=["bad"]
-  >{(mutedText) => (
-      <div>{mutedText}</div>
-    )}
+  >{"Actual text there bad words are to be muted"}
   </Mute>
 
-  // => <div>Actual text there ❤️❤️❤️ words are to be muted</div>
+  // => Actual text there ❤️❤️❤️ words are to be muted
 ```
 
 ## API
 
 ### **`children`**
 
-Function which takes muted text and return valid react Node.
+**type: string**
+
+Text that needs to be muted
 
 ### **`addWords`**
 
@@ -51,9 +50,5 @@ Array of words to unmute. This will remove words from existing list of bad words
 **default: '*'**
 
 Replace these character in muted words.
-
-### **`text`**
-
-Text to make safe
 
 *** This package is dependent on https://github.com/web-mech/badwords for badwords implementation ***
