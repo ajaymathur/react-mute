@@ -1,4 +1,4 @@
-![Preview](github/banner.png)
+![react mute](https://raw.githubusercontent.com/ajaymathur/react-mute/master/github/banner.png)
 
 > Mute the bad words in react component
 
