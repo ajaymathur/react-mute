@@ -1,5 +1,5 @@
 // @flow
-import React, { type Node } from "react";
+import React, { type Node, Fragment } from "react";
 import Filter from 'bad-words';
 
 type MuteProps = {
@@ -36,10 +36,9 @@ export default class Mute extends React.Component<MuteProps> {
     const { children } = this.props;
     
     return (
-      // $FlowFixMe
-      <React.Fragment>
+      <Fragment>
         {this.filter.clean(children)}
-      </React.Fragment>
+      </Fragment>
     );
   }
 }
