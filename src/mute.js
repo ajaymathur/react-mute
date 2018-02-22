@@ -13,6 +13,7 @@ export default class Mute extends React.Component<MuteProps> {
   filter: {clean: Function, addWords: Function, removeWords: Function};
 
   static defaultProps = {
+    children: '',
     removeWords: [],
     safeText: '*',
   }
