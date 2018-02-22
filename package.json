@@ -1,6 +1,6 @@
 {
   "name": "react-mute",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Mute the bad words in react component",
   "author": "Ajay Narain Mathur <ajaynarainmathur@gmail.com>",
   "license": "MIT",
