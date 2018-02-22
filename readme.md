@@ -6,6 +6,8 @@
 
 Stop people from polluting your react application with bad words. Mute the bad words.
 
+This library uses react fragment and thus does not add any DOM node.
+
 ## Installing
 
 ```sh
@@ -37,11 +39,15 @@ Text that needs to be muted
 
 ### **`addWords`**
 
+**type: Array<string>**
+
 Array of words to mute. These will append to the list of existing list of bad words. 
 
 List of words &rarr; https://github.com/web-mech/badwords/blob/master/lib/lang.json
 
 ### **`removeWords`**
+
+**type: Array<string>**
 
 Array of words to unmute. This will remove words from existing list of bad words.
 
@@ -49,6 +55,12 @@ Array of words to unmute. This will remove words from existing list of bad words
 
 **default: '*'**
 
+**type: string**
+
 Replace these character in muted words.
 
 *** This package is dependent on https://github.com/web-mech/badwords for badwords implementation ***
+
+## License
+
+MIT Copyright (c) 2018-present Ajay Narain Mathur
