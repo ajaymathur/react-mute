@@ -1,4 +1,8 @@
+# dependency cache
 node_modules
+
+# parcel cache
 .cache
-dist
+
+# parcel dev builds
 build

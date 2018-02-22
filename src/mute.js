@@ -1,5 +1,5 @@
 // @flow
-import React, { type Node, Fragment } from "react";
+import React, { Fragment } from "react";
 import Filter from 'bad-words';
 
 type MuteProps = {
